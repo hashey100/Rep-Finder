@@ -15,7 +15,6 @@ var lng = [];
 
 // JavaScript
 window.onload = function(){
-
     var f = (function(){
         var xhr = [];
         for (i = 0; i < locations.length; i++){
@@ -35,7 +34,6 @@ window.onload = function(){
             })(i);
         }
     })();
-
 };
 
 function calcDistance (fromLat, fromLng, toLat, toLng) {
@@ -100,13 +98,6 @@ function calcDistance (fromLat, fromLng, toLat, toLng) {
           calcDist.push(calcdis);
           container.innerHTML += '<div class='+Math.round(calcdis*10)/10+'><span>'+ parseInt(i+1)+'</span><span>'+names[i]+'</span><span>'+Math.round(calcdis*10)/10+' Miles </span></div>';
         }
-
-        var reference_array = ["2", "3", "7", "4", "3"];
-        var array = ["bob", "dan", "steven", "corbin","test"];
-        array.sort(function(a, b) {
-          console.log(b);
-        return reference_array.indexOf(a) - array.indexOf(b);
-        });
 
         var icon = {
           url: place.icon,
